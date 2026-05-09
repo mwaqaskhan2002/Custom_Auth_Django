@@ -10,6 +10,7 @@ db.sqlite3
 media/
 
 # Environment — Most Important!
+**/.env
 .env
 .venv/
 venv/
