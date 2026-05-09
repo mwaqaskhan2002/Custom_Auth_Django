@@ -136,7 +136,7 @@ EMAIL_HOST_PASSWORD = mail_password
 DEFAULT_FROM_EMAIL = 'My App <noreply@myapp.com>'
 SERVER_EMAIL = 'noreply@myapp.com'
 
-PASSWORD_RESET_TIMEOUT = 60 # Token expiration time in seconds (100 seconds = 1 minute 40 seconds)
+PASSWORD_RESET_TIMEOUT = 3600 # Token expiration time in seconds (100 seconds = 1 minute 40 seconds)
 # Custom Authentication Backend
 AUTHENTICATION_BACKENDS = (
     "django.contrib.auth.backends.ModelBackend", # Default (Username login ke liye)
@@ -157,5 +157,5 @@ LOGOUT_REDIRECT_URL = 'login'
 LOGIN_URL = 'login'
 
 #Session Settings
-SESSION_COOKIE_AGE = 60       # Session will expire after 60 seconds of inactivity
+SESSION_COOKIE_AGE = 1800       # Session will expire after 60 seconds of inactivity
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True # Session will expire when the browser is closed
