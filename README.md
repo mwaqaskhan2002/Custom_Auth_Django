@@ -48,11 +48,21 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+## Email Testing — Ethereal
+
+1. Go To [ethereal.email](https://ethereal.email) 
+2. Create Account 
+3. Add Credentials in `.env` 
+4. Password reset karo — email **Messages tab** 
+5. Rendered HTML Message 
+
 ## Environment Variables
 
-`SECRET_KEY` | Django secret key |
-`MAIL` | Ethereal email address |
-`MAIL_PASSWORD` | Ethereal SMTP password |
+| Variable | Description |
+|---|---|
+| `SECRET_KEY` | Django secret key |
+| `MAIL` | Ethereal email address |
+| `MAIL_PASSWORD` | Ethereal SMTP password |
 
 ## Settings
 
@@ -77,4 +87,4 @@ pip install -r requirements.txt
 
 ## Author
 
-Muhammad Waqas
+Muhammad Waqas Khan
