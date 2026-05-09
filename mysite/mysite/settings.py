@@ -23,13 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-secret_key = os.getenv("SECRET_KEY")
-SECRET_KEY = secret_key
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -123,15 +121,12 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-mail = os.getenv("MAIL")
-mail_password = os.getenv("MAIL_PASSWORD")
-
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.ethereal.email'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = mail
-EMAIL_HOST_PASSWORD = mail_password
+EMAIL_HOST_USER = os.getenv("MAIL")
+EMAIL_HOST_PASSWORD =os.getenv("MAIL_PASSWORD")
 
 DEFAULT_FROM_EMAIL = 'My App <noreply@myapp.com>'
 SERVER_EMAIL = 'noreply@myapp.com'
@@ -142,14 +137,6 @@ AUTHENTICATION_BACKENDS = (
     "django.contrib.auth.backends.ModelBackend", # Default (Username login ke liye)
     "mysite.backend.EmailorUsernameModelBackend", # Custom (Email ya Username login ke liye)
 )
-
-AUTH_PASSWORD_VALIDATORS = [
-    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
-    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
-    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'},
-    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
-]
-
 
 # Redirect URLs
 LOGIN_REDIRECT_URL = '/'              
