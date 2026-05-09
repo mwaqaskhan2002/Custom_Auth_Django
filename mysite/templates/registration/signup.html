@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+
+
+{%block title%}Sign Up{% endblock title %}
+
+{%block content%}
+    <div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-5">Create Account</h3>
+                    
+                    <form method="post" action="{% url 'signup' %}">
+                        {% csrf_token %}
+
+                        {% if form.errors %}
+                            {% for field in form %}
+                                {% for error in field.errors %}
+                                    <p class="text-danger">{{ error }}</p>
+                                {% endfor %}
+                            {% endfor %}
+                            {% for error in form.non_field_errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        {% endif %}
+
+                        <!-- Username -->
+                        <div class="form-floating form-group mb-3 position-relative">
+                            {% render_field form.username class="form-control" placeholder="Username" %}
+                            <label for="{{ form.username.id_for_label }}" class="quicksand-600">Username</label>
+
+                            <span class="d-flex justify-content-end position-absolute end-0 top-50 translate-middle-y me-3">
+                                <i class="bi bi-person-fill" style="font-size: 1rem;"></i>
+                            </span>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-floating mb-3 position-relative">
+                            {% render_field form.email class="form-control" placeholder="Email Address" %}
+                            <label for="{{ form.email.id_for_label }}" class="quicksand-600">Email Address</label>
+
+                            <span class="d-flex justify-content-end position-absolute end-0 top-50 translate-middle-y me-3">
+                                <i class="bi bi-envelope-fill" style="font-size: 1rem;"></i>
+                            </span>
+                        </div>
+
+                        <div class="form-floating mb-3 position-relative">
+                            {% render_field form.password1 class="form-control" placeholder="New Password" %}
+                            <label for="{{ form.password1.id_for_label }}" class="quicksand-600">New Password</label>
+                                
+                            <span class="d-flex justify-content-end position-absolute end-0 top-50 translate-middle-y me-3" style="cursor: pointer;" onclick="togglePassword(this)">
+                                <i class="bi bi-eye-slash-fill" id="togglePassword" style="font-size: 1rem;"></i>
+                            </span>
+                        </div>
+                            
+                        <div class="form-floating mb-3 position-relative">
+                            {% render_field form.password2 class="form-control" placeholder="Confirm Password" %}
+                            <label for="{{ form.password2.id_for_label }}" class="quicksand-600">Confirm Password</label>
+
+                            <span class="d-flex justify-content-end position-absolute end-0 top-50 translate-middle-y me-3" style="cursor: pointer;" onclick="togglePassword(this)">
+                                <i class="bi bi-eye-slash-fill" id="togglePassword" style="font-size: 1rem;"></i>
+                            </span>
+                        </div>
+
+                        <div class="d-grid mt-5 quicksand-700">
+                            <button type="submit" class="btn btn-success">Register</button>
+                        </div>
+                    </form>
+
+
+                    <hr>
+
+                     <div class="text-center quicksand-600">
+                        <small>Already have an account? 
+                            <a href="{% url 'login' %}" class="text-decoration-none">Login</a>
+                        </small>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

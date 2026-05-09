@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.quicksand-300 {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.quicksand-600 {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.quicksand-700 {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #4db2ec; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* .borders * {
+    border: 1px solid black;
+} */
+
+.form{
+    border: 1px solid black;
+    border-radius: 15px;
+    font-weight: 700;
+    /* max-width: fit-content;
+    margin: 0 auto */
+}
+
+/* .form-group{
+    border: 1px solid black;
+} */
+
+.errorlist li{
+    color: red;
+    list-style-type: none;
+    /* margin-bottom: 10px; */
+}
+
+.error{
+    color: red;
+    list-style-type: none;
+    /* margin-bottom: 10px; */
+}
+
+form input, 
+form select {
+    display: block;
+    /* margin: 10px auto; */
+    padding: 5px;
+    width: 100%;
+}
+
+.borders *{
+    border: 1px solid black;
+}
