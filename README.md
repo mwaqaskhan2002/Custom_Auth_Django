@@ -14,9 +14,9 @@ A custom authentication system built with Django, featuring login, signup, passw
 
 ## Tech Stack
 
-- Python 3.12
-- Django 6.0
-- Bootstrap 5.3
+- Python = 3.12
+- Django = 6.0
+- Bootstrap = 5.3
 - Ethereal Email (Testing)
 
 ---
