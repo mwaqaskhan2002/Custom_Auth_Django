@@ -17,9 +17,6 @@ A custom authentication system built with Django, featuring login, signup, passw
 - Python 3.12
 - Django 6.0
 - Bootstrap 5.3
-- Bootstrap Icons
-- Widget Tweaks
-- Python Dotenv
 - Ethereal Email (Testing)
 
 ---
