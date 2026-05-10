@@ -50,7 +50,7 @@ pip install -r requirements.txt
 1. Go To [ethereal.email](https://ethereal.email) 
 2. Create Account 
 3. Add Credentials in `.env` 
-4. Password reset karo — email **Messages tab** 
+4. Reset your Password — email **Messages tab** 
 5. Rendered HTML Message 
 
 ## Environment Variables
