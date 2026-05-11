@@ -29,7 +29,7 @@ git clone https://github.com/your-username/custom-auth-django.git
 cd custom-auth-django
 ```
 
-### 2. Virtual Environment Banao
+### 2. Create Virtual Environment 
 ```bash
 python -m venv .venv
 
